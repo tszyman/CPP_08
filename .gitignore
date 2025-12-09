@@ -1,0 +1,8 @@
+/CPP_08.code-workspace
+CPP_08_subject.pdf
+
+-- VSCode files --
+.vscode/*
+
+-- output files --
+*.o
