@@ -6,7 +6,7 @@
 #    By: tszymans <tszymans@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/03/10 19:27:57 by tszymans          #+#    #+#              #
-#    Updated: 2026/03/10 22:23:37 by tszymans         ###   ########.fr        #
+#    Updated: 2026/03/11 22:01:03 by tszymans         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ CC      = c++
 CFLAGS  = -Wall -Wextra -Werror -std=c++98
 
 SRCS    = main.cpp\
+			Span.cpp
 
 OBJS    = $(SRCS:.cpp=.o)
 
