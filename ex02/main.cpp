@@ -1,19 +1,10 @@
 #include "MutantStack.hpp"
 #include <iostream>
+#include <algorithm>
 
-template <typename T>
-void printContainer(T &container)
+void printElement(int i)
 {
-	// 1. Always use typename for dependent types like T::iterator
-	typename T::iterator it = container.begin();
-	typename T::iterator ite = container.end();
-
-	// 2. Standard for-loop syntax
-	for (; it != ite; ++it)
-	{
-		std::cout << *it << " ";
-	}
-	std::cout << std::endl;
+	std::cout << i << " ";
 }
 
 int main(){
@@ -47,7 +38,12 @@ int main(){
 		std::cout << *it << std::endl;
 		++it;
 	}
-	//printContainer(mstack);
+
+	std::cout << "Stack elements (printed with for_each): ";
+	// Use std::for_each with your MutantStack iterators
+	std::for_each(mstack.begin(), mstack.end(), printElement);
+	std::cout << std::endl;
+
 	std::stack<int> s(mstack);
 	std::cout << "\n--- Test with list ---" << std::endl;
 
@@ -80,7 +76,12 @@ int main(){
 		std::cout << *list_it << std::endl;
 		++list_it;
 	}
-	printContainer(l);
+
+	std::cout << "List elements (printed with for_each): ";
+	// Use std::for_each with list iterators
+	std::for_each(l.begin(), l.end(), printElement);
+	std::cout << std::endl;
+
 	std::list<int> ll(l);
 
 	return 0;
