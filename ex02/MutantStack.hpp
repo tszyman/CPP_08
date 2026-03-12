@@ -3,6 +3,8 @@
 
 #include <stack>
 #include <list>
+#include <vector>
+#include <deque>
 
 template <typename T>
 class MutantStack : public std::stack<T> {
